@@ -7,7 +7,7 @@ close all
 dirichlet = boundary{1}
 neumann = boundary{2}
 
-f = @(x) ones(size(x,1),1)*0.01;
+f = @(x) ones(size(x,1),1)*0.1;
 g = @(x) zeros(size(x,1),1);
 uD = @(x) zeros(size(x,1),1);
 
