@@ -46,7 +46,7 @@ for i = 1:N-1
     summe = summe + update;
 end
 
-integral = summe * ds; % 54-81
+integral = summe * ds % 54-81
 
 % Analytische Abschätzung:
 % MinMax Werte laut Grafik sind ca. 4.3 und 6.5 und Radius = 2
