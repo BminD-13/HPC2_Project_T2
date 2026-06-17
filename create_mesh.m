@@ -1,3 +1,5 @@
+function [coordinates, elements, boundary, dirichlet, neumann] = create_mesh(h_max)
+
 % Punkte A, L, K, J, I, H, G, F, E, D, D', C, B
 coordinates = [
     0,  0;    % A
@@ -34,7 +36,7 @@ g = [
 
 
 
-[p,e,t]=initmesh(g,'hmax',0.3);
+[p,e,t]=initmesh(g,'hmax',h_max);
 elements = t(1:3,:)';
 coordinates = p';
 

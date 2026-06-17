@@ -9,7 +9,7 @@ mesh_sizes = [ ...
 ];
 circle_stepsizes = [ ...
     %0.01:0.01:0.1, ...
-    %0.12:0.02:0.5, ...
+    0.12:0.02:0.5, ...
     0.55:0.05:2
 ];
 
@@ -115,14 +115,15 @@ colorbar
 figure
 surf(X,Y,integrals_dudn')
 
-xlabel('h mesh}')
-ylabel('h circle')
+xlabel('h_{max}')
+ylabel('h_{ring}')
 zlabel('Integral')
 %title('Konvergenz von \int_\Gamma du/dn ds')
 
 shading interp
 colorbar
 
+
 % Laufzeit Plot
 figure
-plot(mesh_sizes, sw_meshing)
+plot([sw_solveIdudn])
